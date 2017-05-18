@@ -6,6 +6,10 @@ After invoking services POST method multiple times (~8) service (any method) bec
 
 `mvn clean package`
 
+### Create $TOMCAT_HOME/bin/setenv.sh
+
+export JAVA_OPTS="-Dcom.arjuna.ats.jta.recovery.XAResourceRecovery1=com.arjuna.ats.internal.jdbc.recovery.BasicXARecovery\;h2recoveryproperties.xml\ \;1"
+
 ### Deploy reproducer to your Tomcat instance
 
 `cp target/reproducer.war $TOMCAT_HOME/webapps/`
