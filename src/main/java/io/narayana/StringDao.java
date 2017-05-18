@@ -74,8 +74,8 @@ public class StringDao {
      */
     public void save(String string) throws SQLException {
         // Connection must be closed by transaction
-        Connection connection = getDataSource().getConnection();
-        try (Statement statement = connection.createStatement()) {
+        try (Connection connection = getDataSource().getConnection();
+            Statement statement = connection.createStatement()) {
             statement.execute(String.format(INSERT_STRING_QUERY, string));
         }
     }
