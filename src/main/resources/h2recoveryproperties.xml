@@ -2,7 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <entry key="DB_1_DatabaseUser">sa</entry>
-    <entry key="DB_1_DatabasePassword">sa"</entry>
+    <entry key="DB_1_DatabasePassword">sa</entry>
     <entry key="DB_1_DatabaseDynamicClass">com.arjuna.ats.internal.jdbc.drivers.PropertyFileDynamicClass</entry>
     <entry key="DB_1_DatabaseURL">/home/still/Documents/jbosstm/transactional-driver-with-tomcat-and-h2-issue-reproducer/src/main/resources/h2recoverydatasource.properties</entry>
 </properties>
