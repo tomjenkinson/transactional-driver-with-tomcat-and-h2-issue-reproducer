@@ -1,12 +1,12 @@
-### Problem description
+### Description
 
-After invoking services POST method multiple times (~8) service (any method) becomes unresponsive. Seems that database connections are not released by the transaction manager.
+This quickstart shows how to get started with Narayana and Transactional Driver in a simple JDBC example.
 
 ### Start Tomcat
 
-`rm -rf apache-tomcat-7.0.78; unzip apache-tomcat-7.0.78.zip; echo "export JAVA_OPTS=\"-Dcom.arjuna.ats.jta.recovery.XAResourceRecovery1=com.arjuna.ats.internal.jdbc.recovery.BasicXARecovery\;abs://C:\home\still\Documents\jbosstm\transactional-driver-with-tomcat-and-h2-issue-reproducer\src\main\resources\h2recoveryproperties.xml\ \;1\"" > $TOMCAT_HOME/bin/setenv.sh ; chmod +x $TOMCAT_HOME/bin/catalina.sh`
-`JPDA_SUSPEND=y ./apache-tomcat-7.0.78/bin/catalina.sh jpda run`
+You must add a $TOMCAT_HOME/bin/setenv.sh with the following content:
 
+`export JAVA_OPTS="-Dcom.arjuna.ats.jta.recovery.XAResourceRecovery1=com.arjuna.ats.internal.jdbc.recovery.BasicXARecovery\;abs://$QUICKSTART_HOME/src/main/resources/h2recoveryproperties.xml\ \;1"`
 
 ### Build and deploy the reproducer
 
